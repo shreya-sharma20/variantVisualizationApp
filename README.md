@@ -12,8 +12,8 @@
 - This helps in understanding how variants might impact gene function or contribute to diseases.
 
 ## Variant Visualization Application
-- This application uses a pre-loaded VCF file to visualize variants in IGV (using `igvshiny` R library)
-- The first tab of the application loads IGV and the variant data. User can select the row corresponding to the variant of interest in the variant table to visualize the variant in IGV.
+- This application uses the variant file obtained from the sample data provided by the `igvshiny` R library and is from chromosome 19 CEBPA region.
+- The first tab of the application loads the variant data in IGV. User can select the row corresponding to the variant of interest in the variant table to visualize the variant in IGV. Once the user selects a row, the IGV coordinates are updated and the user can visualise the variant in that region.
 - In the second tab, the app explores the variant data by constructing the following plots:
   - Scatter plot displaying depth of coverage across the entire chromnosome.
   - Histogram indicating the distribution of variant quality scores.
