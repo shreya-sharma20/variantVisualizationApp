@@ -20,15 +20,15 @@ ui = dashboardPage(
           icon=icon("dna")
         ),
         menuItem(
-          text = "Plots",
+          text = "Data Visualization",
           tabName = "plotTab",
           icon=icon("vials")
         )
       ),
     div(style = "position: absolute; bottom: 0; width: 95%; overflow-x: hidden;",
         tags$a(
-            href="https://procogia.com",
-            tags$img(src = "procogia-logo.png", style = "max-width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto;")
+            href="https://procogia.com",target="_blank",
+            tags$img(src = "procogia-logo.png", style = "max-width: 90%; height: auto; display: block; margin-left: auto; margin-right: auto; padding-bottom: 25px;")
         )
     )
   ),
@@ -53,10 +53,7 @@ ui = dashboardPage(
         ),
         tabItem(
           tabName = "plotTab",
-          fluidRow(
-            box(
-              title = "Plots", status = "primary", solidHeader = TRUE, collapsible = TRUE, width = 12,
-              fluidRow(
+            fluidRow(
                 column(
                     width = 6,
                     plotlyOutput("varDpPlot")
@@ -65,19 +62,18 @@ ui = dashboardPage(
                     width = 6,
                     plotlyOutput("varQualPlot")
                 )
-              ),
-              fluidRow(
+            ),
+            br(),
+            fluidRow(
                 column(
                     width = 6,
-                    plotOutput("varTypePlot")
+                    plotlyOutput("varTypePlot")
                 ),
                 column(
                     width = 6,
-                    plotOutput("varTiTvPlot")
+                    plotlyOutput("varTiTvPlot")
                 )
-              )
             )
-          )
         )
     )
   )
